@@ -2,7 +2,7 @@ func printAge(name: String) {
     print("\(name) is 29")
 }
 
-printAge("Adam")
+printAge(name: "Adam")
 
 
 func happyBirthday(age: Int) {
@@ -23,15 +23,15 @@ func badGetAge(name: String) -> Int {
 
 
 let friend = "Emily"
-var friendAge = getAge(friend)
-happyBirthday(friendAge)
+var friendAge = getAge(name:friend)
+happyBirthday(age: friendAge)
 
 
 func birthdayGreeting(age: Int) -> String {
     return "Happy birthday #\(age)!"
 }
 
-var greeting = birthdayGreeting(30)
+var greeting = birthdayGreeting(age: 30)
 print(greeting)
 
 
@@ -42,4 +42,31 @@ func getAgeAndCongratulate(name: String) -> Int {
 }
 
 let friend2 = "Pete"
-var friend2Age = getAgeAndCongratulate(friend2)
+var friend2Age = getAgeAndCongratulate(name: friend2)
+
+func inviteToDinner(name: String) -> Int {
+    let date = 30
+    print("\(name), would you like to come to dinner on the \(date)th?")
+    return date
+}
+
+let bestFriend = "Sean"
+var bestFriend2Dinner = inviteToDinner(name:"Sean"
+)
+
+func goToWork(name: String) -> String {
+    return "\(name) has to go to work!"
+}
+
+goToWork(name: "TJ")
+
+func partyTime(name: String) -> String {
+    let party = "Summer Championships"
+    print("\(name) can't wait for the \(party)!")
+    return party
+}
+
+let host = "John"
+var hostOfParty = partyTime(name: host)
+
+
